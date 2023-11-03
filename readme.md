@@ -1,66 +1,58 @@
 
-# Node.js Dashboard for HTTP Requests
+# Node.js POST and GET Dashboard
 
-This project is a Node.js application that features a web-based dashboard to initiate POST and GET requests to an external API. It serves the dashboard through Express and handles HTTP requests with the Axios library.
+This project sets up a basic Node.js server that serves a dashboard page where users can make POST and GET requests to specified endpoints. The responses from these requests are displayed on the dashboard under the respective buttons.
 
-## Table of Contents
+## Project Structure
 
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Development](#development)
-- [Built With](#built-with)
+```
+my-node-project/
+|-- node_modules/
+|-- public/
+|   |-- index.html
+|   `-- script.js
+|-- package.json
+`-- server.js
+```
 
-## Getting Started
+### `server.js`
 
-These instructions will guide you in setting up the project and running it on your local machine for development and testing purposes.
+This is the entry point of the Node.js server which serves the static files and sets up the server to listen on port 3000.
 
-### Prerequisites
+### `public/index.html`
 
-Before you begin, ensure you have the following installed:
-- [Node.js](https://nodejs.org/)
-- npm (Comes with Node.js)
+This file contains the HTML for the dashboard, including buttons to trigger the POST and GET requests.
 
-### Installation
+### `public/script.js`
 
-Follow these steps to get your development environment running:
+This JavaScript file includes the client-side logic to perform POST and GET requests and display the results in the browser.
+
+## Installation
+
+To get started with the project, follow these steps:
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/<your-username>/<your-project-name>.git
-   cd <your-project-name>
    ```
-
-2. Install project dependencies:
-   ```bash
+   git clone https://github.com/emmanuel-salcedo/Capstone/
+   ```
+2. Navigate to the project directory:
+   ```
+   cd Capstone
+   ```
+3. Install the necessary dependencies:
+   ```
    npm install
    ```
-
-3. Start the server:
-   ```bash
-   node index.js
+4. Start the server:
    ```
-
-After starting the server, the dashboard should be available at `http://localhost:3000`.
+   npm start
+   ```
+5. The server will start at `http://localhost:3000`. Open this URL in your web browser to view and interact with the dashboard.
 
 ## Usage
 
-With the server running, visit `http://localhost:3000` in your web browser to access the dashboard. Use the interface to send POST and GET requests and view the responses directly within the web page.
+Once the server is running and the dashboard is opened in a web browser:
 
-## Development
-
-This section guides you through making changes to the project:
-
-- The front-end dashboard files are located within the `public` directory.
-- Server configuration and API request handlers can be found in the `index.js` file.
-
-To contribute or customize, simply modify the files and test the changes by refreshing your browser while the server is running.
-
-## Built With
-
-- [Express](https://expressjs.com/) - The web framework used
-- [Axios](https://github.com/axios/axios) - For making HTTP requests
-- [Node.js](https://nodejs.org/) - The server environment
-
-
+- Click the **Make POST Request** button to send a POST request to the configured endpoint.
+- Click the **Make GET Request** button to send a GET request to the configured endpoint.
+- The responses from these requests will be displayed under the respective buttons on the dashboard.
